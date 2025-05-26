@@ -11,7 +11,7 @@ A modern, responsive healthcare dashboard built with React and Vite. This dashbo
 - Calendar view with appointment scheduling
 - Upcoming schedule display
 - Activity feed with weekly statistics
-- Static data management using mock data
+- Static data management using mock json data
 
 ## Getting Started
 
@@ -52,7 +52,3 @@ yarn dev
 - Modern JavaScript (ES6+)
 
 
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
