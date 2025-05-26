@@ -51,7 +51,8 @@ yarn dev
 - Modern JavaScript (ES6+)
 
 ## Screenshot of Dashboard
-![image](https://github.com/user-attachments/assets/3ca883e2-b944-4335-95b6-9b43768538d2)
+![image](https://github.com/user-attachments/assets/34637712-1ad0-42da-bc6d-d1d38075bc2a)
+
 
 
 
