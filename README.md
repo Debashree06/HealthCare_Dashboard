@@ -44,7 +44,9 @@ yarn dev
 
 4. Open your browser and navigate to `http://localhost:5173`
 
-## Technologies Used
+## Screenshot of Dashboard
+![image](https://github.com/user-attachments/assets/3ca883e2-b944-4335-95b6-9b43768538d2)
+
 
 - React
 - Vite
