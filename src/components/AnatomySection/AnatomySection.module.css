@@ -1,0 +1,280 @@
+.anatomyContainer {
+  position: relative;
+  background: white;
+  padding: 1.5rem;
+}
+
+.anatomyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2D3648;
+}
+
+.periodSelector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6B7280;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.anatomyContent {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 1.5rem;
+}
+
+.anatomyImageSection {
+  position: relative;
+  background: #F8FAFC;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.zoomControls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.zoomButton {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.anatomyImage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.anatomyImg {
+  height: 250px;
+  width: auto;
+  object-fit: contain;
+}
+
+.healthIndicator {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.indicatorBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.indicatorIcon {
+  font-size: 1rem;
+}
+
+.healthy {
+  background-color: #4945FF;
+  color: white;
+}
+
+.attention {
+  background-color: #00FFE0;
+  color: #2D3648;
+}
+
+.zoomSlider {
+  margin-top: 1rem;
+}
+
+.slider {
+  width: 100%;
+  height: 4px;
+  background: #E2E8F0;
+  border-radius: 2px;
+  appearance: none;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #4945FF;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sliderDot {
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 8px;
+  height: 8px;
+  background: #4945FF;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.healthStatusCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.statusCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.statusIcon {
+  font-size: 1.25rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statusInfo {
+  flex: 1;
+}
+
+.statusInfo h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2D3648;
+  margin-bottom: 0.25rem;
+}
+
+.statusDate {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+}
+
+.progressBar {
+  height: 4px;
+  background: #E2E8F0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.detailsLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.detailsLink span {
+  transition: transform 0.2s;
+}
+
+.detailsLink:hover span {
+  transform: translateX(4px);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .anatomyContent {
+    grid-template-columns: 1fr;
+  }
+
+  .healthStatusCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .statusCard {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .anatomyContainer {
+    padding: 1rem;
+  }
+
+  .anatomyContent {
+    gap: 1rem;
+  }
+
+  .anatomyImageSection {
+    padding: 1rem;
+    min-height: 250px;
+  }
+
+  .anatomyImg {
+    height: 250px;
+  }
+
+  .healthStatusCards {
+    grid-template-columns: 1fr;
+  }
+
+  .indicatorBadge {
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  .indicatorIcon {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .anatomyContainer {
+    padding: 0.75rem;
+  }
+
+  .anatomyImageSection {
+    min-height: 200px;
+  }
+
+  .anatomyImg {
+    height: 200px;
+  }
+
+  .statusCard {
+    padding: 0.75rem;
+  }
+}

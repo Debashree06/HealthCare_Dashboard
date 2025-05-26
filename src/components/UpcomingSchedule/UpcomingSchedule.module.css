@@ -1,0 +1,222 @@
+/* src/components/UpcomingSchedule/UpcomingSchedule.module.css - MINOR SIZING ADJUSTMENTS */
+.upcomingSchedule {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 18px; /* Slightly reduced padding */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly reduced gap */
+  flex-grow: 1;
+}
+
+.sectionTitle {
+  font-size: 1.05rem; /* Slightly reduced font size */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px; /* Slightly reduced margin */
+}
+
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly reduced gap */
+}
+
+.dayGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Slightly reduced gap */
+}
+
+.dayLabel {
+  font-size: 0.8rem; /* Slightly reduced font size */
+  color: #7d8592;
+  margin-bottom: 4px; /* Slightly reduced margin */
+  font-weight: 500;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .upcomingSchedule {
+    padding: 15px;
+    gap: 10px;
+  }
+  .sectionTitle {
+    font-size: 1rem;
+  }
+  .scheduleList {
+    gap: 10px;
+  }
+  .dayGroup {
+    gap: 7px;
+  }
+  .dayLabel {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .upcomingSchedule {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .upcomingSchedule {
+    padding: 10px;
+  }
+  .sectionTitle {
+    font-size: 0.95rem;
+  }
+  .scheduleList {
+    gap: 8px;
+  }
+  .dayGroup {
+    gap: 6px;
+  }
+  .dayLabel {
+    font-size: 0.7rem;
+  }
+}
+
+.scheduleContainer {
+  background: var(--card-background);
+
+  padding: var(--spacing-lg);
+  height: 100%;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2D3648;
+  margin-bottom: var(--spacing-lg);
+}
+
+.scheduleGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.scheduleGroup:last-child {
+  margin-bottom: 0;
+}
+
+.dayTitle {
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.appointmentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+
+.appointmentGridNew {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.appointmentCard {
+  background: #F3F4F9;
+  border-radius: 12px;
+  padding: var(--spacing-md);
+  transition: transform 0.2s ease;
+}
+
+.appointmentCard:hover {
+  transform: translateY(-2px);
+}
+
+.appointmentInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appointmentTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: #4B5563;
+  font-size: 0.95rem;
+}
+
+.icon {
+  font-size: 1.1rem;
+}
+
+.appointmentTime {
+  color: #6B7280;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+  .scheduleContainer {
+    padding: var(--spacing-md);
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .appointmentGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .scheduleContainer {
+    padding: var(--spacing-sm);
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .dayTitle {
+    font-size: 0.85rem;
+  }
+
+  .appointmentTitle {
+    font-size: 0.9rem;
+  }
+
+  .appointmentTime {
+    font-size: 0.8rem;
+  }
+
+  .appointmentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .dayTitle {
+    font-size: 0.8rem;
+  }
+
+  .appointmentTitle {
+    font-size: 0.85rem;
+  }
+
+  .appointmentTime {
+    font-size: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+}

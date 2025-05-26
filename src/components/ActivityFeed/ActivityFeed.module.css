@@ -1,0 +1,228 @@
+
+.activityContainer {
+  background: white;
+  padding: 1.5rem;
+}
+
+.activityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2D3648;
+}
+
+.appointmentCount {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.periodSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.statTrend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.up {
+  color: #10B981;
+}
+
+.down {
+  color: #EF4444;
+}
+
+.graphContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 200px;
+  padding: 1rem;
+  background: #F8FAFC;
+  border-radius: 12px;
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.barsContainer {
+  display: flex;
+  gap: 4px;
+  height: 150px;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 6px;
+  border-radius: 3px;
+  transition: height 0.3s ease;
+  min-height: 4px;
+}
+
+.scheduledBar {
+  background-color: #00FFE0;
+}
+
+.completedBar {
+  background-color: #4945FF;
+}
+
+.dayLabel {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-top: 4px;
+}
+
+.graphLegend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.primaryDot {
+  background: #4945FF;
+}
+
+.secondaryDot {
+  background: #00FFE0;
+}
+
+
+@media (max-width: 1024px) {
+  .statsGrid {
+    gap: 0.75rem;
+  }
+
+  .statCard {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .activityContainer {
+    padding: 1rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .graphContainer {
+    height: 180px;
+    padding: 0.75rem;
+  }
+
+  .barsContainer {
+    height: 130px;
+  }
+
+  .bar {
+    width: 4px;
+  }
+
+  .dayLabel {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .activityContainer {
+    padding: 0.75rem;
+  }
+
+  .graphContainer {
+    height: 160px;
+    padding: 0.5rem;
+  }
+
+  .barsContainer {
+    height: 120px;
+    gap: 2px;
+  }
+
+  .bar {
+    width: 3px;
+  }
+
+  .dayLabel {
+    font-size: 0.75rem;
+  }
+
+  .graphLegend {
+    gap: 1rem;
+  }
+
+  .legendItem {
+    font-size: 0.6875rem;
+  }
+
+  .legendDot {
+    width: 4px;
+    height: 4px;
+  }
+}
